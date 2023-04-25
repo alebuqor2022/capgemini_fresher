@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="13.116">
+    <testcase classname="test login functionality" name="Check login is successful with valid credentials" time="12.923">
+        <system-out><![CDATA[Given user is login page....................................................passed
+When user enters username and password......................................passed
+And clicks on login button..................................................passed
+Then user is navigated to the home page.....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Search dresses" name="Search dresses" time="0.002">
+        <failure message="The scenario has no steps" type="java.lang.Exception"/>
+    </testcase>
+</testsuite>
