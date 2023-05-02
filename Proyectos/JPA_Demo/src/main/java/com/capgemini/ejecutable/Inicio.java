@@ -1,12 +1,17 @@
 package com.capgemini.ejecutable;
 
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
 import com.capgemini.dao.DaoCiudad;
+import com.capgemini.dao.DaoCurso;
+import com.capgemini.dao.DaoEstudiante;
 import com.capgemini.dao.DaoPais;
 import com.capgemini.dao.DaoPersona;
 import com.capgemini.model.Ciudad;
+import com.capgemini.model.Curso;
+import com.capgemini.model.Estudiante;
 import com.capgemini.model.Pais;
 import com.capgemini.model.Persona;
 
@@ -17,8 +22,8 @@ public class Inicio {
 //		buscarPersona();
 //		actualizarPersona();
 //		borrarPersona();
-		testPaisCiudad();
-		
+//		testPaisCiudad();
+		testEstudianteCurso();
 	}
 
 	public static void testPaisCiudad() {
@@ -81,4 +86,20 @@ public class Inicio {
 		DaoPersona.delete(152L);
 	}
 
+	public static void testEstudianteCurso() {
+		Estudiante e=DaoEstudiante.find(2L);
+		System.out.println("----Estudiante------");
+		System.out.println(e.getNombre()+" "+e.getApellido());
+		System.out.println("----Cursos------");
+		List<Curso> cursos= DaoCurso.findAllCursos(1);
+		
+		for(Object o: cursos) {
+			System.out.println(resultado(o));
+		}
+		
+	}
+	
+	private static String resultado(Object o) {
+		return Arrays.asList((Object[])o).toString();
+	}
 }
