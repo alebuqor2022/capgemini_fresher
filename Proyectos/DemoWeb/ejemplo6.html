@@ -1,0 +1,49 @@
+<html>
+	<head>
+        <title>Ejemplo de tabla avanzada</title>
+    </head>
+	<body>
+		<h3>Análisis de ventas</h3>
+		<table summary="Análisis de ventas anuales" border="2">
+			<caption>Análisis de ventas anuales</caption>
+			<thead>
+				<tr>
+					<th rowspan="2" scope="col">AÑO</th>
+					<th colspan="4" scope="col">Expansión de ventas</th>
+				</tr>
+				<tr>
+					<th scope="col">Producto A</th>
+					<th scope="col">Producto B</th>
+					<th scope="col">Producto C</th>
+					<th scope="col">Producto D</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th rowspan="2" scope="col">AÑO</th>
+					<th scope="col">Producto A</th>
+					<th scope="col">Producto B</th>
+					<th scope="col">Producto C</th>
+					<th scope="col">Producto D</th>
+				</tr>
+				<tr>
+					<th colspan="4" scope="col">Expansión de ventas</th>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<th scope="row">N-3</th><td>-</td><td>-</td><td>-</td><td>-</td>
+				</tr>
+				<tr>
+					<th scope="row">N-2</th><td>3</td><td>5</td><td>8</td><td>4</td>
+				</tr>
+				<tr>
+					<th scope="row">N-1</th><td>4</td><td>4</td><td>7</td><td>3</td>
+				</tr>
+				<tr>
+					<th scope="row">N</th><td>5</td><td>7</td><td>6</td><td>2</td>
+				</tr>
+			</tbody>
+		</table>
+    </body>
+    </html>
