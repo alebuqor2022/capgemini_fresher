@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="./codigo.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<form onsubmit="validacion();">
+    <select id="opciones" name="opciones">
+        <option value="">- Selecciona un valor -</option>
+        <option value="1">Primer valor</option>
+        <option value="2">Segundo valor</option>
+        <option value="3">Tercer valor</option>
+    </select>
+    <br>
+    <input type="radio" value="si" name="pregunta" id="pregunta_si"/> SI
+	<input type="radio" value="no" name="pregunta" id="pregunta_no"/> NO
+	<input type="radio" value="nsnc" name="pregunta" id="pregunta_nsnc"/> NS/NC
+    <br>
+    <button onclick="checkeo();">Ver cual esta checked</button>
+    <br>
+    <input type="checkbox" value="condiciones" name="condiciones" id="condiciones"/> 
+    He leído y acepto las condiciones
+	<input type="checkbox" value="privacidad" name="privacidad" id="privacidad"/>
+	He leído la política de privacidad
+    <br>
+    <button onclick="selecciones();">Ver cual esta seleccionado</button>
+    <br>
+    <input type="submit" value="Enviar">
+</form>
+</body>
+</html>

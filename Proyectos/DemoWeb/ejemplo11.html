@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>Ejemplo de código JavaScript en el propio documento</title>
+	<script type="text/javascript">
+		alert("Un mensaje de prueba");
+        function verEnlace(){
+        var enlace = document.getElementById("enlace");
+        alert(enlace.href); 	// muestra http://www...com
+        }
+	</script>
+    <script type="text/javascript" src="./codigo.js"></script>
+
+</head>
+<body>
+
+
+	<p>Un párrafo de texto.</p>
+    <p onclick="alert('Un mensaje de Alejandra')">Un ejemplo de texto.</p>
+    <p onclick="verEnlace();">veo google</p>
+    <a id="enlace" href="http://www.google.com">Enlace a Google</a>
+    <p onclick="verEnlaceBis();">veo google por 2da vez</p>
+    <div id="contenidos" onmouseover="this.style.borderColor='red';" onmouseout="this.style.borderColor='red';">
+		Sección de contenidos...
+    </div>
+    <form>
+     <input type="button" value="Clickeame" onmouseover="alert('Acabas de pasar el mouse encima');" />
+     <input type="button" value="Clickeame" onclick="alert('Gracias por hacerme click!!!');"/>
+    </form>
+</body>
+</html>

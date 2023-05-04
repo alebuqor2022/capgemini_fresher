@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="./package/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="./package/dist/sweetalert2.min.css">
+    <title>Document</title>
+    <!-- https://sourceforge.net/projects/sweetalert2.mirror/ -->
+</head>
+<script>
+    function hola(){
+        Swal.fire(
+            'Good Job!',
+            'Clickeaste el boton',
+            'success'
+        )
+    }
+    function gatito(){
+        Swal.fire({
+            title: 'Custom width, padding, color, background.',
+            width: 600,
+            padding: '3em',
+            color: '#716add',
+            background: '#fff url(./imagenes/trees.png)',
+            backdrop: `
+              rgba(0,0,123,0.4)
+              url("./imagenes/nyan-cat.gif")
+              left top
+              no-repeat
+            `
+          })
+    }
+</script>
+<body>
+<button onclick="hola();">hola</button>
+<br>
+<button onclick="gatito();">hola gatito</button> 
+<br>
+
+</body>
+</html>
