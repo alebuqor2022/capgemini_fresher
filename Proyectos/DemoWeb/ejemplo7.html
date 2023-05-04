@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo7</title>
+</head>
+<body>
+<form action="./ejemplo6.html" method="post">
+    <label>Escriba su nombre: </label>
+    <input type="text" placeholder="coloque su nombre"/>
+    <br>
+    <label>Escriba su clave: </label>
+    <input type="password"/>
+    <br>
+    <input type="radio" name="sexo" id="varon">
+    <label for="varon">Varon: </label>
+    <br>
+    <input type="radio" name="sexo" id="mujer" checked>
+    <label for="mujer">Mujer: </label>
+    <br>
+    <input type="radio" name="sexo" id="autopercibe">
+    <label for="autopercibe">Autopercibe: </label>
+    <br>
+    <input type="checkbox" name="cds">Certificado de deposito
+    <input type="checkbox" name="hipo">Hipotecas
+    <input type="checkbox" name="prest" checked>Prestamos
+    <br>
+
+    <br>
+    <select name="transaccion" multiple="multiple">
+    <option value="saldo">Saldo de la cuenta</option>  
+    <option value="trans">Transferir</option> 
+    <option value="movi" selected>Ultimos movimientos</option> 
+    <option value="alto">Detener pago de un chequ</option>   
+    </select>
+    <select name="transaccion" >
+    <option value="saldo">Saldo de la cuenta</option>  
+    <option value="trans">Transferir</option> 
+    <option value="movi" selected>Ultimos movimientos</option> 
+    <option value="alto">Detener pago de un chequ</option>   
+    </select>
+    <select id="programa" name="programa">
+        <optgroup label="Sistemas Operativos">
+           <option value="Windows" selected="selected">Windows</option>
+           <option value="Mac">Mac</option>
+           <option value="Linux">Linux</option>
+           <option value="Other">Otro</option>
+         </optgroup>
+         <optgroup label="Navegadores">
+           <option value="Internet Explorer" selected="selected">Internet Explorer</option>
+           <option value="Firefox">Firefox</option>
+           <option value="Safari">Safari</option>
+           <option value="Opera">Opera</option>
+           <option value="Other">Otro</option>
+         </optgroup>
+        </select>
+    <br>
+    <textarea rows="5" cols=60 chars=255 name="comentarios" placeholder="sus comentarios aqui"></textarea>
+    <br>
+    <input type="reset" value="Borrar" />
+    <input type="submit" value="Submit" />
+    <input type="button" value="Enviar" click=""/>
+    <input type="image" name="ver" src="./imagenes/televisor.png" />
+    
+    <fieldset>
+        <legend>Un titulo</legend>  
+        <input type="radio" id="radio">
+        <label for ="radio"> haga click aqui</label>  <br>
+        <label>Su nombre </label>
+        <input type="text">
+        <br>
+        <input type="submit" valor="Enviar">
+    </fieldset>
+
+
+</form>
+</body>
+</html>
