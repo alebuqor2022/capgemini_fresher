@@ -1,0 +1,20 @@
+*{
+    margin:10px;
+    padding:5px;
+}
+body{
+    background-color:burlywood;
+    font-family: 'Times New Roman', Times, serif;
+}
+div.ref1{
+    background-color:rgb(135,195,222);
+}
+div.ref2{
+    background-color:rgb(222, 216, 135);
+}
+.destacado{
+    color:red;
+}
+#mencion{
+    color:blue;
+}
