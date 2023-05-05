@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+function leer(){
+	fetch('http://localhost:8080/personas/3')
+	.then(data=>{return data.json();})
+	.then(post=>{console.log(post.nombre)})
+}
+function agregar(){
+	const alta={
+			apellido:'Gonzales',
+			nombre:'Fernando'
+	};
+	const options={
+			method:'POST',
+			headers:{
+				'Content-Type':'application/json',
+			},
+			body : JSON.stringify(alta),
+	};
+	fetch('http://localhost:8080/personas', options)
+	.then(data=>{if (!data.ok){throw Error(data.status)}return data.json()})
+	.then(alta=>{console.log(alta);}).catch(e=>{console.log(e);});
+	
+}
+</script>
+</head>
+<body>
+<h1>Hola Alejandra</h1>
+<button onclick="leer();">leo persona</button>
+<button onclick="agregar();">guardo persona</button>
+</body>
+</html>
