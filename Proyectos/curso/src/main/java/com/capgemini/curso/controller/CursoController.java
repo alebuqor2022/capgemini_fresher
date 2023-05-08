@@ -7,6 +7,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -42,7 +43,8 @@ public String findPaginated(@PathVariable(value="pageNo") int pageNo, @RequestPa
 }
 
 @PostMapping("/save")
-public String saveCurso() {
+public String saveCurso(@ModelAttribute("course") Curso curso) {
+	cursoService.saveCurso(curso);
 	return "redirect:/";
 }
 
@@ -59,7 +61,10 @@ public String showFormForUpdate(@PathVariable(value="id") long id, Model model) 
 	return "update_course";
 }
 
-public String showNewCursoForm() {
-	return null;
+@GetMapping("/add")
+public String showNewCursoForm(Model model) {
+	Curso curso=new Curso();
+	model.addAttribute("course", curso);
+	return "new_course";
 }
 }

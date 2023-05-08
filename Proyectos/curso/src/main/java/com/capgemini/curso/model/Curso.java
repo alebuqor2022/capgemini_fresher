@@ -40,6 +40,13 @@ public class Curso {
 		this.instructor = instructor;
 		this.nombreCurso = nombreCurso;
 	}
+	
+	public Curso(String email, String instructor, String nombreCurso) {
+		super();
+		this.email = email;
+		this.instructor = instructor;
+		this.nombreCurso = nombreCurso;
+	}
 	public Long getId() {
 		return id;
 	}
