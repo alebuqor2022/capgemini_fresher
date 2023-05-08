@@ -10,9 +10,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+//@Data
+//@AllArgsConstructor
+//@NoArgsConstructor
 
 @Entity
 @Table(name="talleres")
@@ -27,5 +27,42 @@ public class Curso {
 	private String instructor;
 	@Column
 	private String nombreCurso;
+	
+	
+	public Curso() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Curso(Long id, String email, String instructor, String nombreCurso) {
+		super();
+		this.id = id;
+		this.email = email;
+		this.instructor = instructor;
+		this.nombreCurso = nombreCurso;
+	}
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getInstructor() {
+		return instructor;
+	}
+	public void setInstructor(String instructor) {
+		this.instructor = instructor;
+	}
+	public String getNombreCurso() {
+		return nombreCurso;
+	}
+	public void setNombreCurso(String nombreCurso) {
+		this.nombreCurso = nombreCurso;
+	}
 	
 }

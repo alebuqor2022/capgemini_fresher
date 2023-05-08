@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.capgemini.curso.model.Curso;
@@ -40,16 +41,22 @@ public String findPaginated(@PathVariable(value="pageNo") int pageNo, @RequestPa
 	return "index";
 }
 
+@PostMapping("/save")
 public String saveCurso() {
-	return null;
+	return "redirect:/";
 }
 
-public String deleteCurso() {
-	return null;
+@GetMapping("/delete/{id}")
+public String deleteCurso(@PathVariable(value="id") long id) {
+	this.cursoService.deleteCursoById(id);
+	return "redirect:/";
 }
 
-public String showFormForUpdate() {
-	return null;
+@GetMapping("/update/{id}")
+public String showFormForUpdate(@PathVariable(value="id") long id, Model model) {
+	Curso curso=this.cursoService.getCursoById(id);
+	model.addAttribute("course", curso);
+	return "update_course";
 }
 
 public String showNewCursoForm() {

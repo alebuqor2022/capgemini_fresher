@@ -7,21 +7,33 @@
 </head>
 <body>
 <h3>Listado de Cursos</h3>
-<table>
+<div class="container">
+<table class="table table-striped table-responsive-md">
 <thead>
 <tr>
-<th>Nombre</th>
-<th>Instructor</th>
-<th>Email</th>
+<th><a th:href="@{'/page/' + ${currentPage} + '?sortField=nombreCurso&sortDir=' + ${reverseSortDir}}">
+Nombre</a>
+</th>
+<th><a th:href="@{'/page/' + ${currentPage} + '?sortField=instructor&sortDir=' + ${reverseSortDir}}">
+Instructor</a></th>
+<th><a th:href="@{'/page/' + ${currentPage} + '?sortField=email&sortDir=' + ${reverseSortDir}}">
+Email</a></th>
+<th>Acciones</th>
 </tr>
+
 </thead>
 <tbody> 
 <tr th:each="course:${listCurses}">
 <td th:text="${course.nombreCurso}"></td>
 <td th:text="${course.instructor}"></td>
 <td th:text="${course.email}"></td>
+<td>
+<a class="btn btn-primary" th:href="@{/update/{id}(id=${course.id})}">Actualizar</a>
+<a class="btn btn-danger" th:href="@{/delete/{id}(id=${course.id})}">Eliminar</a>
+</td>
 </tr>
 </tbody>
 </table>
+</div>
 </body>
 </html>
