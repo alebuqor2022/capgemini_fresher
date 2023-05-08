@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Cursos</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+<h3>Listado de Cursos</h3>
+<table>
+<thead>
+<tr>
+<th>Nombre</th>
+<th>Instructor</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody> 
+<tr th:each="course:${listCurses}">
+<td th:text="${course.nombreCurso}"></td>
+<td th:text="${course.instructor}"></td>
+<td th:text="${course.email}"></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
